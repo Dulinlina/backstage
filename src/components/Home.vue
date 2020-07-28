@@ -1,5 +1,7 @@
 <template>
-<div class=''></div>
+<div class='home'>
+    <el-button type="info" @click="logout">退出</el-button>
+</div>
 </template>
 
 <script>
@@ -18,7 +20,10 @@ computed: {},
 watch: {},
 //方法集合
 methods: {
-
+    logout(){
+        window.sessionStorage.clear()
+        this.$router.push('/login')
+    }
 },
 //生命周期 - 创建完成（可以访问当前this实例）
 created() {
